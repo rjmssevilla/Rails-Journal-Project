@@ -1,0 +1,20 @@
+
+<% if @category.errors.any? %>
+  <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+  <ul>
+    <% @category.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%=form_with model: @category do |form| %>
+
+  <div class="mb-3">
+   <%= form.label :title %>
+   <%= form.text_field :title, class:"form-control" %>
+  </div>
+
+   <%= form.submit "Create category" %>
+ <%end%>
+
