@@ -11,4 +11,18 @@
  * It is generally better to create a new file per style scope.
  *
  */
+ $body-bg: #89BDBB;
  @import "../node_modules/bootstrap/scss/bootstrap";
+
+.container{
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.navbar{
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: #64495C !important;
+}
+
+.navbar-light a {
+  color: red;
+  }
