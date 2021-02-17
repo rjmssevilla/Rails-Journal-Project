@@ -4,3 +4,4 @@ class Task < ApplicationRecord
   validates :deadline, presence:true
   belongs_to :category
 end
+
