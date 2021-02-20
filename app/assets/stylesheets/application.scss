@@ -14,6 +14,10 @@
  $body-bg: #89BDBB;
  @import "../node_modules/bootstrap/scss/bootstrap";
 
+.category-header-container{
+  text-align:center;
+}
+
 .container{
   font-family: 'Montserrat', sans-serif !important;
 }
