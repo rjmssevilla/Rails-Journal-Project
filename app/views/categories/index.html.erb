@@ -10,7 +10,9 @@
   <thead>
     <tr>
     <th>Category</th>
-    <th>Show task</th>
+    <th>Number of tasks</th>
+    <th>Show tasks</th>
+    <th></th>
   </tr>
   </thead>
 
@@ -18,8 +20,10 @@
     <% @categories.each do |category| %>
       <tr>
     <td><%= category.title %></td>
+    <td><%= category.tasks.count %></td>
     <td><%= link_to 'Show', category_path(category), class:"btn btn-info" %></td>
     <td><%= link_to 'Delete', category_path(category),class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %></td>
+    
     </tr>
     <% end %>
   </tbody>
