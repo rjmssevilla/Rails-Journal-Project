@@ -1,9 +1,8 @@
-
 <br><br>
 <div class = "container">
 
 <div class = "mb-3">
-<%= link_to 'New Category', new_category_path, class: 'btn btn-success' %>
+<%= link_to 'New Category', new_user_category_path(@user), class: 'btn btn-success' %>
 </div>
 
 <table class = "table table-bordered table-striped">
@@ -17,16 +16,15 @@
   </thead>
 
   <tbody>
-    <% @categories.each do |category| %>
+    <% @user.categories.each do |category| %>
       <tr>
     <td><%= category.title %></td>
     <td><%= category.tasks.count %></td>
-    <td><%= link_to 'Show', category_path(category), class:"btn btn-info" %></td>
-    <td><%= link_to 'Delete', category_path(category),class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %></td>
+    <td><%= link_to 'Show', category_path(category),class:"btn btn-info" %></td>
+    <td><%= link_to 'Delete', category_path(category), class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %></td>
     
     </tr>
     <% end %>
   </tbody>
 </table>
 </div>
-

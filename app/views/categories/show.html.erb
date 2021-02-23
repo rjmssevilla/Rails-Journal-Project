@@ -1,13 +1,13 @@
 <div class = "category-header-container">
 <h2>Current Category: <%=@category.title %> 
 
-<%= link_to 'Back', categories_path%> </h2>
+<%= link_to 'Back', user_categories_path(@user)%> </h2>
 </div>
 
 
   <div class = "container">
   <%= link_to 'Create New Task', new_category_task_path(@category), class: 'btn btn-success mb-3' %>
-  <%= link_to 'Edit Category', edit_category_path, class:"btn btn-light mb-3" %>
+  <%= link_to 'Edit Category', edit_category_path(@category), class:"btn btn-light mb-3" %>
 <table class = "table table-bordered table-striped">
   <thead>
     <tr>
@@ -29,7 +29,7 @@
   </tbody>
 </table>
 
-<%#= link_to 'SHOW TASKS', category_tasks_path(@category) %>
+<%#= link_to 'SHOW TASKS' %>
 
 
 

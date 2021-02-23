@@ -1,10 +1,8 @@
 class TasksController < ApplicationController
-
-  before_action :get_category, only: [:index, :new, :create]
-
-  def index
-    @tasks = @category.tasks
-  end
+  
+  before_action :get_user, only: [:new, :create, :edit]
+  before_action :get_category, only: [:new, :create]
+  
 
   def new
     @task = @category.tasks.build
@@ -12,6 +10,7 @@ class TasksController < ApplicationController
 
   def create
     @task = @category.tasks.build(task_params)
+     @task.user_id = @user.id
     if @task.save
 	    redirect_to category_path(@category)
     else 
@@ -43,6 +42,10 @@ class TasksController < ApplicationController
 
 
 private
+def get_user
+  @user = current_user
+end
+
  def get_category
   @category = Category.find(params[:category_id])
  end

@@ -2,7 +2,7 @@ require "test_helper"
 
 class TaskTest < ActiveSupport::TestCase
   setup do
-    @task = tasks(:one)
+    @task = tasks(:task_one)
   end
   
   test "1A. should not save task without title" do

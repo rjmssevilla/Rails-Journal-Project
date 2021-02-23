@@ -4,9 +4,10 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one:
+task_one:
  title: Homework
  description: Math
- deadline: 2021-March-10
- category: one
+ deadline: 2021-12-12
+ category: category_one
+ user: user_one
  

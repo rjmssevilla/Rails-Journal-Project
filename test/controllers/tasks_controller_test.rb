@@ -2,8 +2,9 @@ require "test_helper"
 
 class TasksControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @category = categories(:one)
-    @task = tasks(:one)
+    @user = users(:user_one)
+    @category = categories(:category_one)
+    @task = tasks(:task_one)
   end
   
   test "1. should get index" do

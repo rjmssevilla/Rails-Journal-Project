@@ -8,8 +8,7 @@
   </ul>
 <% end %>
 
-<%=form_with model: @category do |form| %>
-
+<%=form_with model: [@user, @category], local: true do |form| %>
   <div class="mb-3">
    <%= form.label :title %>
    <%= form.text_field :title, class:"form-control" %>
