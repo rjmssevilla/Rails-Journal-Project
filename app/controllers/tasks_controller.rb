@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   
-  before_action :get_user, only: [:new, :create, :edit]
+  before_action :get_user
   before_action :get_category, only: [:new, :create]
   
 
@@ -16,6 +16,10 @@ class TasksController < ApplicationController
     else 
       render :new
     end
+  end
+
+  def show
+    @task = Task.find(params[:id])
   end
 
   def edit
