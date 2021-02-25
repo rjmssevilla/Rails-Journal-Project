@@ -1,10 +1,10 @@
 class TasksController < ApplicationController
   
   before_action :get_user
-  before_action :get_category, only: [:new, :create]
+  before_action :get_category, only: [:index, :new, :create]
   
   def index
-    @tasks = @category.tasks.where('date <= ?', Date.today)
+    @tasks = @category.tasks
    end
 
   def new

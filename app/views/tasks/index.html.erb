@@ -13,16 +13,19 @@
     
   </tr>
   </thead>
-
+<h1>SKKKR</h1>
   <tbody>
     <% @tasks.each do |task| %>
+      <% if task.deadline == Date.today %>
       <tr>
-    <td><%= task.title %></td>
-    <td><%= task.description %></td>
-    <td><%= task.deadline %></td>
-    <td><%= task.category_id %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
-    </tr>
+      <td><%= task.title %></td>
+      <td><%= task.description %></td>
+      <td><%= task.deadline %></td>
+      <td><%= task.category_id %></td>
+      <td><%= link_to 'Edit', edit_task_path(task) %></td>
+      </tr>
+      <% end %>
+   
     <% end %>
   </tbody>
 </table>
