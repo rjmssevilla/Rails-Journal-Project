@@ -1,3 +1,33 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+#welcome{
+  text-align: center;
+  color:white;
+}
+
+#welcome-content{
+ margin-top:100px;
+
+}
+
+.cursive {
+  font-size: 80px;
+  font-family: 'Dancing Script', cursive;
+  text-transform: none;
+}
+
+.btn.btn-light {
+  background-color: transparent;
+  border:2px solid #f0f0f0;
+  border-color:#f0f0f0;
+  border-radius: 290px;
+  padding: 15px 30px;
+  color:white;
+  font-size: 20px;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}

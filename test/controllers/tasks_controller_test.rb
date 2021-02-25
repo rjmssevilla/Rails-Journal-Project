@@ -5,7 +5,6 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     get '/users/sign_in'
     sign_in users(:user_one)
  
-   # @user = users(:user_one)
     @category = categories(:category_one)
     @task = tasks(:task_one)
   end

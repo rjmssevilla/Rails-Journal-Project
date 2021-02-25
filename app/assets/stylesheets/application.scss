@@ -11,22 +11,40 @@
  * It is generally better to create a new file per style scope.
  *
  */
- $body-bg: #89BDBB;
+ //$body-bg: #89BDBB;
  @import "../node_modules/bootstrap/scss/bootstrap";
+
+ html,
+ body {
+     background-image: url('/assets/welcome_bg.jpg');
+     background-size: cover;
+ }
 
 .category-header-container{
   text-align:center;
 }
 
 .container{
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Questrial', sans-serif !important;
 }
 
 .navbar{
-  font-family: 'Montserrat', sans-serif !important;
-  background-color: #64495C !important;
+  font-family: 'Questrial', sans-serif !important;
+  background: none !important;
 }
 
-.navbar-light a {
-  color: red;
-  }
+.navbar a{
+  color:white!important;
+}
+
+a:hover,
+a:focus {
+    color: #888888 !important; 
+    outline: 0 !important;
+}
+
+
+
+
+
+

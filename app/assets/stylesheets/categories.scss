@@ -1,3 +1,58 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#category-index-container{
+  background: linear-gradient(to bottom, rgba(104,104,104,0.8),rgba(192,192,192,0.5));
+  border: 2px solid #DCDCDC;
+  color:white;
+ }
+ 
+ 
+ hr.category-hr{
+ border: 5px solid #463d3e;
+ }
+ 
+.btn.btn-light {
+  background-color: transparent;
+  border:2px solid #f0f0f0;
+  border-color:#f0f0f0;
+  border-radius: 200px;
+  padding: 5px 20px;
+  color:white;
+  font-size: 20px;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+
+.btn-new-category{
+  background: linear-gradient(to bottom, rgba(104,104,104,0.8),rgba(192,192,192,0.5));
+  border:2px solid #f0f0f0;
+  border-color:#f0f0f0;
+  border-radius: 290px;
+  padding: 5px 30px;
+  color:white;
+  font-size: 20px;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+.btn-new-category:hover{
+  background-color: #228B22;
+  color: white !important;
+}
+
+
+.btn-new-category:hover{
+  background-color: #228B22;
+  color: white !important;
+}
+
+.btn-delete-category:hover{
+  background-color: #CF1020;
+  color: white !important;
+}
+
+
+

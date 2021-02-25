@@ -1,6 +1,17 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<%= stylesheet_link_tag 'welcome.css' %>
+<div id="welcome" class="container"> <!--START OF WELCOME CONTENT -->
+  <div id="welcome-content" class = "d-flex flex-column">
 
+    <div class ="header-content">
+      <h1 class = "cursive">Task Management Made Simple.</h1>
+      <h4>With this website, tasks are easily managed and coordinated.</h4>
+      <hr>
+    </div>
+    <div class ="f-flex flex-row">
+      <%= link_to 'Login', new_user_session_path, class:'btn btn-light' %> 
+      &nbsp; 
+      <%= link_to 'Signup', new_user_registration_path, class:'btn btn-light' %>
+      </div>
+  </div>
+</div> <!--END OF WELCOME CONTENT -->
 
-<%= link_to 'Login', new_user_session_path, class: 'btn btn-success' %>
-<%= link_to 'Signup', new_user_registration_path, class: 'btn btn-success' %>
