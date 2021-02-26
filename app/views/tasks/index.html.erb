@@ -13,15 +13,15 @@
   </tr>
   </thead>
  
-  <%= link_to 'Back', :back,class:"btn btn-back-priority mb-3" %>
+  <%= link_to 'Back', :back ,class:"btn btn-back-priority mb-3" %>
   <tbody>
     <% @tasks.each do |task| %>
       <% if task.deadline == Date.today %>
       <tr>
       <td><%= task.title %></td>
       <td><%= task.deadline.strftime("%m/%d/%Y")%></td>
-      <td><%= link_to 'Show', task_path(task) %></td>
-      <td><%= link_to 'Edit', edit_task_path(task) %></td>
+      <td><u><%= link_to 'Show', task_path(task) %></u></td>
+      <td><u><%= link_to 'Edit', edit_task_path(task) %></u></td>
       <td><%= link_to 'Delete', task_path(task), class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %></td>
       </tr>
       <% end %>

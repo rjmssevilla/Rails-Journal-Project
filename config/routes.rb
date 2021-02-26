@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "my_devise/registrations"}
 
 
 resources :users, shallow: true do 

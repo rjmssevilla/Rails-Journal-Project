@@ -1,0 +1,38 @@
+.jumbotron{
+
+  background: rgba(95,95,95,0.8);
+  color:white;
+ }
+
+ .btn-edit-task{
+  background: linear-gradient(to bottom, rgba(104,104,104,0.8),rgba(192,192,192,0.5));
+  border:2px solid #f0f0f0;
+  border-color:#f0f0f0;
+  border-radius: 290px;
+  padding: 5px 30px;
+  color:white;
+  font-size: 20px;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+.btn-edit-task:hover{
+  background-color: #228B22;
+  color: white !important;
+}
+ .btn-delete-task{
+  background: linear-gradient(to bottom, rgba(104,104,104,0.8),rgba(192,192,192,0.5));
+  border:2px solid #f0f0f0;
+  border-color:#f0f0f0;
+  border-radius: 290px;
+  padding: 5px 30px;
+  color:white;
+  font-size: 20px;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+.btn-delete-task{
+  background-color: red;
+  color: white !important;
+}

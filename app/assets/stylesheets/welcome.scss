@@ -1,16 +1,23 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
 
 #welcome{
   text-align: center;
   color:white;
+
+}
+
+.centered {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #welcome-content{
  margin-top:100px;
-
 }
 
 .cursive {
@@ -18,6 +25,7 @@
   font-family: 'Dancing Script', cursive;
   text-transform: none;
 }
+
 
 .btn.btn-light {
   background-color: transparent;
