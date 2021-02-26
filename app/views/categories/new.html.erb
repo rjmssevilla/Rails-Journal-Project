@@ -1,6 +1,26 @@
-<div class = "category-header-container">
-<h1> NEW CATEGORY </h1>
+<%= stylesheet_link_tag 'categories.css' %>
+<div class = "category-header-container mt-5">
+<h1> NEW CATEGORY</h1>
 </div>
-<div class ="container">
-<%= render 'form'%>
+<div class ="category-new-container">
+
+<% if @category.errors.any? %>
+  <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+  <ul>
+    <% @category.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%=form_with model: [@user, @category], local: true do |form| %>
+  <div class="mb-3">
+   <%= form.label :title,"TITLE" %>
+   <%= form.text_field :title, class:"form-control" %>
+  </div>
+
+
+   <%= form.submit "Submit", class:"btn btn-new-category" %>
+
+ <%end%>
 </div>

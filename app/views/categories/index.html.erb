@@ -1,30 +1,44 @@
 <%= stylesheet_link_tag 'categories.css' %>
+
 <br><br>
-<div class="container">
+<div class = "container">
 
-<%= link_to 'Create New Category', new_user_category_path(@user), class: 'btn btn-new-category mb-3' %>
-<% @user.categories.each do |category| %>
-  <div id = "category-index-container" class = "container mb-5">
-    <div class="row mt-3">
-      <div class="col-6">
-       <h1>CATEGORY: <%= category.title%> </h1>
-      </div>
-      <div class="col-6">
-       <%= link_to 'Delete Categoryy', category_path(category), class:"btn btn-light btn-delete-category", method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
-     </div>
-    </div>
-    <hr class = "category-hr">
 
-    <div class="row mb-3">
-      <div class="col-6">
-      <h4>Number of tasks: <%= category.tasks.count%> </h4>
-      </div>
-      <div class="col-6">
-      <%= link_to 'Show Tasks', category_path(category),class:"btn btn-light" %>
+
+  <% if @user.categories.count == 0 %>
+
+    <div id="welcome" class = "d-flex flex-column mt-3">
+      <div class ="welcome-content">
+        <h4 id="welcome-text">You don't have any categories created. Get started by clicking <u><%= link_to 'here', new_user_category_path(@user) %></u>.</h4>
       </div>
     </div>
+
+  <%else%>
+  <%= link_to 'Create New Category', new_user_category_path(@user), class: 'btn btn-new-category mb-3' %>
+  <div class = "row">
+  <% @user.categories.each do |category| %>
+    <div class = "col-6 mb-3">
+      <div class="card text-center card-categories">
+        <div class="card-header">
+          CATEGORY TITLE
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= category.title%></h5>
+          <p class="card-text">Number of tasks: <%= category.tasks.count%></p>
+          <%= link_to 'Show Tasks', category_path(category),class:"btn btn-light mb-3" %>
+          <%= link_to 'Delete Categoryy', category_path(category), class:"btn btn-light btn-delete-category mb-3", method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+        </div>
+        <div class="card-footer text-muted">
+          Date created: <%= category.created_at.strftime("%m/%d/%Y")%>
+        </div>
+      </div>
+      </div>
+   <% end %>
   </div>
-<% end %>
+
+
+  <% end %>
+
 
 </div>
 

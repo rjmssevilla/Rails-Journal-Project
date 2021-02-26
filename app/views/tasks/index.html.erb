@@ -1,28 +1,28 @@
-
+<%= stylesheet_link_tag 'tasks.css' %>
 <br><br>
+<h1 style="text-align:center;">TASKS DUE TODAY:</h1>
 <div class = "container">
-</div>
-<div class = "container">
-<table class = "table table-bordered table-striped">
+
+<table class = "table table-dark table-striped table-bordered table-hover" style="overflow-x:auto;">
   <thead>
     <tr>
     <th>Title</th>
-    <th>Description</th>
     <th>Deadline</th>
-    <th>Category ID</th>
+
     
   </tr>
   </thead>
-<h1>SKKKR</h1>
+ 
+  <%= link_to 'Back', :back,class:"btn btn-back-priority mb-3" %>
   <tbody>
     <% @tasks.each do |task| %>
       <% if task.deadline == Date.today %>
       <tr>
       <td><%= task.title %></td>
-      <td><%= task.description %></td>
-      <td><%= task.deadline %></td>
-      <td><%= task.category_id %></td>
+      <td><%= task.deadline.strftime("%m/%d/%Y")%></td>
+      <td><%= link_to 'Show', task_path(task) %></td>
       <td><%= link_to 'Edit', edit_task_path(task) %></td>
+      <td><%= link_to 'Delete', task_path(task), class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %></td>
       </tr>
       <% end %>
    

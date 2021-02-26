@@ -1,7 +1,8 @@
-<div class = "category-header-container">
-<h1> EDIT CATEGORY </h1>
+<%= stylesheet_link_tag 'categories.css' %>
+<div class = "category-header-container mt-5">
+<h1> EDIT CATEGORY</h1>
 </div>
-<div class ="container">
+<div class ="category-new-container">
 
 <% if @category.errors.any? %>
   <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
@@ -14,18 +15,12 @@
 
 <%=form_with model: [@category], local: true do |form| %>
   <div class="mb-3">
-   <%= form.label :title %>
+   <%= form.label :title,"TITLE" %>
    <%= form.text_field :title, class:"form-control" %>
   </div>
 
 
-   <%= form.submit "Submit", class:"btn btn-success" %>
+   <%= form.submit "Submit", class:"btn btn-new-category" %>
 
  <%end%>
-
-
-
-
-
 </div>
-

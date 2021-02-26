@@ -20,6 +20,25 @@
      background-size: cover;
  }
 
+ hr#navbar-hr{
+  padding: 0;
+  border: none;
+  border-top: 5px double #333;
+  color: #333;
+  text-align: center;
+ }
+
+
+ hr#navbar-hr:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 2.5em;
+  padding: 0 0.25em;
+  background: rgba(118,118,120, 0.3);
+}
+
 .category-header-container{
   text-align:center;
 }

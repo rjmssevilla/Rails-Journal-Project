@@ -8,6 +8,34 @@
   color:white;
  }
  
+ #welcome{
+  text-align: center;
+  color:white;
+}
+
+#welcome a{
+  color: white; 
+}
+
+#welcome-text {
+  font-size:2.5em; 
+}
+
+.category-new-container{
+  color:white;
+}
+
+.category-header-container{
+  color:white;
+}
+ .card-categories{
+  background: linear-gradient(to bottom, rgba(112,128,144,0.8),rgba(176,196,222,0.5));
+  color:white;
+ }
+
+ .card-footer{
+   color:white !important;
+ }
  
  hr.category-hr{
  border: 5px solid #463d3e;
@@ -20,7 +48,7 @@
   border-radius: 200px;
   padding: 5px 20px;
   color:white;
-  font-size: 20px;
+  font-size: 100%;
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s;
@@ -38,12 +66,6 @@
   -moz-transition: all .35s;
   transition: all .35s;
 }
-.btn-new-category:hover{
-  background-color: #228B22;
-  color: white !important;
-}
-
-
 .btn-new-category:hover{
   background-color: #228B22;
   color: white !important;

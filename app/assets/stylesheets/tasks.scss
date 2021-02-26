@@ -1,3 +1,25 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container{
+  color:white;
+
+}
+
+.btn-back-priority{
+  background: linear-gradient(to bottom, rgba(104,104,104,0.8),rgba(192,192,192,0.5));
+  border:2px solid #f0f0f0;
+  border-color:#f0f0f0;
+  border-radius: 290px;
+  padding: 5px 30px;
+  color:white;
+  font-size: 15px;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+.btn-back-priority:hover{
+  background-color:#ADFF2F;
+  color: white !important;
+}

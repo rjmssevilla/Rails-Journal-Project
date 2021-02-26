@@ -1,21 +1,19 @@
-<div class = "category-header-container">
+<%= stylesheet_link_tag 'category_show.css' %>
+<div class = "category-header-container mt-5">
 <h2>Current Category: <%=@category.title %> </h2>
 
 
 </div>
 
-
   <div class = "container">
-  <%= link_to 'Create New Task', new_category_task_path(@category), class: 'btn btn-success mb-3' %>
-  <%= link_to 'Edit Category', edit_category_path(@category), class:"btn btn-light mb-3" %>
-  <%= link_to 'SHOW PRIORITY', category_tasks_path(@category), class:"btn btn-light mb-3" %>
-<table class = "table table-dark table-striped table-bordered table-hover" style="overflow-x:auto;">
+  <%= link_to 'Create New Task', new_category_task_path(@category), class: 'btn btn-new-task mb-3' %>
+  <%= link_to 'Edit Category', edit_category_path(@category), class:"btn btn-edit-category mb-3" %>
+  <%= link_to 'SHOW PRIORITY', category_tasks_path(@category), class:"btn btn-priority mb-3" %>
+<table class = "table table-dark table-striped table-hover mt-5" style="overflow-x:auto;">
   <thead>
     <tr>
-    <th>Title</th>
-    <th>Description</th>
+    <th>Task</th>
     <th>Deadline</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -25,9 +23,8 @@
     <% @category.tasks.each do |task| %>
       <tr>
     <td><%= task.title %></td>
-    <td><%= task.description%></td>
     <td><%= task.deadline.strftime("%m/%d/%Y")%></td>
-    <td><%= link_to 'Show', task_path(task) %></td>
+    <td><%= link_to 'Show', task_path(task), class:"btn-show-task" %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Delete', task_path(task), class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %></td>
     </tr>
