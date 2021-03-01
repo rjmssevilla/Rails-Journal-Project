@@ -16,9 +16,11 @@
 
  html,
  body {
-     background-image: url('welcome_bg.jpg');
+     background: url(asset-path("welcome_bg.jpg"));
      background-size: cover;
  }
+
+ 
 
  hr#navbar-hr{
   padding: 0;
